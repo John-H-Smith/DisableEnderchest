@@ -2,3 +2,21 @@ name: DisableEnderchest
 version: 1.0
 author: John_H_Smith
 main: de.John_H_Smith.DisableEnderchest.Main
+commands:
+  disableenderchest:
+    usage: Use /disableenderchest help
+    description: Main command for disableenderchest
+    aliases: [de,dechest]
+permissions:
+  disableenderchest.*:
+    description: Parent permission for disableenderchest
+    children:
+      disableenderchest.bypass.manual: true
+      disableenderchest.bypass.command: true
+      disableenderchest.admin: true
+  disableenderchest.bypass:
+    description: bypass permission for enderchests
+    default: false
+  disableenderchest.admin:
+    description: admin command access for disableenderchest
+    default: false
